@@ -1,2 +1,0 @@
-# dorirozen.github.io
-Resume
