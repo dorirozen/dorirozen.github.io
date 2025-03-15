@@ -339,7 +339,7 @@ ul.list-dots li::before {
 
 
 #home {
-    background: url(../images/home2.jpg) no-repeat center center;
+    background: url(../images/head.jpg) no-repeat center center;
     -webkit-background-attachment: fixed;
     background-attachment: fixed;
     background-color: #222;
@@ -1346,11 +1346,6 @@ Resume Timeline
     margin: 0;
 }
 
-/* === Blog Section === */
-.latest-blog-section {
-
-}
-
 .blog-post-wrapper {
     padding: 4px;
     border: 1px solid #eee;
@@ -1414,9 +1409,7 @@ Resume Timeline
     padding: 0 12px;
 }
 
-.post-meta {
 
-}
 
 .the-category a {
     font-size: 12px;
@@ -1525,10 +1518,6 @@ Icon for all respective meta
 }
 
 
-/* === Contact Section === */
-.contact-section {
-
-}
 
 .contact-section strong {
     display: block;
@@ -1729,7 +1718,7 @@ Icon for all respective meta
 /* === Home Page Two === */
 
 #homeTwo {
-    background: #222 url(../images/home2.jpg) no-repeat center center;
+    background: #222 url(../images/head.jpg) no-repeat center center;
     background-size: cover;
     padding: 0;
     position: relative;
@@ -1898,4 +1887,199 @@ Icon for all respective meta
     border: 5px solid #FFF;
     padding: 5px;
     box-shadow: 0 0px 0px 1px #eee;
+}
+/* Fix card height and padding */
+.skill-card {
+    background-color: #1E1E1E;
+    border-radius: 10px;
+    padding: 30px 20px;
+    margin-bottom: 25px;
+    height: auto;  /* Changed from 100% to auto */
+    min-height: 100px;  /* Set a minimum height */
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+/* Make text fit better */
+.skill-title, .skill-card h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    padding-right: 60px; /* Make room for the icon */
+    width: 100%;
+    line-height: 1.4;
+}
+
+/* Position the icon on the right */
+.skill-card i, .skill-card img {
+    position: absolute;
+    right: 20px;
+    font-size: 38px;
+    opacity: 0.9;
+}
+
+/* Add more space between sections */
+.skill-category {
+    margin-bottom: 50px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* First category shouldn't have top border */
+.skill-category:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+/* Make the category headers more prominent */
+.category-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Better alignment for skill rows only - FIXED WITH MORE SPECIFIC SELECTOR */
+.skills-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* For the last domain-specific skills section - FIXED WITH MORE SPECIFIC SELECTOR */
+.skills-section #domain-specific-skills .row {
+    justify-content: space-between;
+}
+
+/* For responsive behavior on smaller screens */
+@media (max-width: 767px) {
+    .skill-card {
+        min-height: 80px;
+        padding: 20px 15px;
+    }
+    
+    .skill-title, .skill-card h5 {
+        font-size: 14px;
+        padding-right: 50px;
+    }
+    
+    .skill-card i, .skill-card img {
+        font-size: 32px;
+        right: 15px;
+    }
+}
+
+.professional-summary {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    line-height: 1.8;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.professional-summary strong {
+    font-weight: 500;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .professional-summary {
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+
+/* Fix list item alignment */
+.list-check {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list-check li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+}
+
+.list-check li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4CAF50; /* Green checkmark */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Create two column layout for skills list */
+@media (min-width: 768px) {
+    .skills-list-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .skills-list-container .list-check li {
+        width: 100%;
+        padding-right: 15px;
+    }
+}
+
+/* Fix list item alignment */
+.skills-list-container .list-check {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list-container .list-check li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+}
+
+.skills-list-container .list-check li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #4CAF50; /* Green checkmark - adjust color to match your theme */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Create better formatting for skills list */
+@media (min-width: 768px) {
+    .skills-list-container .list-check {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    
+    .skills-list-container .list-check li {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 45px; /* Increased to accommodate checkmark */
+        box-sizing: border-box;
+    }
+
+    .skills-list-container .list-check li:before {
+        left: 15px;
+    }
 }
